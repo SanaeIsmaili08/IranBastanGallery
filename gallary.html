@@ -1,91 +1,70 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="EN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Iran, Bastan, Gallery, Art, Culture, History, Photos, Videos, Handgemaakt, Antiek">
-    <meta name="description" content="Bekijk de prachtige collectie van Iran Bastan Gallery. Foto’s en video's van onze handgemaakte en antieke kunstwerken.">
-    <meta name="author" content="Iran-bastan-gallery">
     <title>Gallery - Iran Bastan Gallery</title>
     <link rel="stylesheet" href="style/style.css">
-    </head>
+</head>
 <body>
-    <header class="fixed-header">
-        <img src="image/Logo .jpg" alt="Iran Bastan Gallery Logo" class="logo">
-        <h1>Iran Bastan Gallery</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-             
-                <li class="active"><a href='gallary.html'>Gallery</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="gallery">
-        <h2>Our gallery</h2>
-        <div class="gallery-container">
-            <div class="gallery-item"><img src="image/f4.jpg" alt="Antiek Perzisch tapijt"></div>
-            <div class="gallery-item"><img src="image/f2.jpg" alt="Handgemaakte Iraanse keramiek"></div>
-            <div class="gallery-item"><img src="image/f3.jpg" alt="Detail van een antiek kunstwerk"></div>
-            
-            <div class="gallery-item">
-                <video controls preload="metadata">
-                    <source src="video/v1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="gallery-item">
-                <video controls preload="metadata">
-                    <source src="video/v2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="gallery-item">
-                <video controls preload="metadata">
-                    <source src="video/v3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="gallery-item">
-                <video controls preload="metadata">
-                    <source src="video/v4.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="gallery-item">
-                <video controls preload="metadata">
-                    <source src="video/v5.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="gallery-item">
-                <video controls preload="metadata">
-                    <source src="video/v6.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="gallery-item">
-                <video controls preload="metadata">
-                    <source src="video/v7.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="gallery-item">
-                <video controls preload="metadata">
-                    <source src="video/v8.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </section>
+<header class="fixed-header">
+    <img src="image/Logo .jpg" alt="Iran Bastan Gallery Logo" class="logo">
+    <h1>Iran Bastan Gallery</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="gallary.html">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
 
-   
-        <div class="footer-bottom">
-            &copy; 2025 Iran Bastan Gallery.
-        </div>
-    </footer>
+<section class="gallery">
+    <h2>Our gallery</h2>
+
+    <!-- FOTO'S -->
+    <div class="gallery-container photos">
+        <div class="gallery-item"><img src="image/f4.jpg"></div>
+        <div class="gallery-item"><img src="image/f2.jpg"></div>
+        <div class="gallery-item"><img src="image/f3.jpg"></div>
+        <div class="gallery-item"><img src="image/f5.jpeg"></div>
+        <div class="gallery-item"><img src="image/f6.jpeg"></div>
+        <div class="gallery-item"><img src="image/f7.jpeg"></div>
+        <div class="gallery-item"><img src="image/f8.jpeg"></div>
+        <div class="gallery-item"><img src="image/f9.jpeg"></div>
+    </div>
+
+    <!-- RUIMTE TUSSEN FOTO'S EN VIDEO'S -->
+    <h2 class="video-title">Our videos</h2>
+
+    <!-- VIDEO'S -->
+    <div class="gallery-container videos">
+        <div class="gallery-item video-item"><video src="video/v1.mp4"></video></div>
+        <div class="gallery-item video-item"><video src="video/v2.mp4"></video></div>
+        <div class="gallery-item video-item"><video src="video/v3.mp4"></video></div>
+        <div class="gallery-item video-item"><video src="video/v4.mp4"></video></div>
+        <div class="gallery-item video-item"><video src="video/v5.mp4"></video></div>
+        <div class="gallery-item video-item"><video src="video/v6.mp4"></video></div>
+        <div class="gallery-item video-item"><video src="video/v7.mp4"></video></div>
+        <div class="gallery-item video-item"><video src="video/v8.mp4"></video></div>
+    </div>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+    <span id="closeBtn">&times;</span>
+    <div id="lightbox-content"></div>
+</div>
+
+<script src="script/script.js"></script>
+
+<footer class="footer-bottom">
+    © 2025 Iran Bastan Gallery.
+</footer>
+
 </body>
 </html>
+
 
 

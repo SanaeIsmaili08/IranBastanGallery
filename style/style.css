@@ -1,3 +1,4 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -9,11 +10,12 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
     color: #0b1a33;
-    padding-top: 120px; /* ruimte voor vaste header */
+    padding-top: 140px; /* ruimte voor vaste header */
 }
 
 /* HEADER */
-header {
+header,
+.fixed-header {
     width: 100%;
     position: fixed;
     top: 0;
@@ -27,7 +29,8 @@ header {
 }
 
 /* Logo */
-header .logo {
+header .logo,
+.fixed-header .logo {
     height: 100px;
     width: auto;
     object-fit: contain;
@@ -42,7 +45,7 @@ header h1 {
 
 /* Navigatie */
 nav ul {
-    list-style: none; /* Verwijdert eventuele lijststippen */
+    list-style: none;
     display: flex;
     gap: 30px;
 }
@@ -56,12 +59,12 @@ nav a {
 }
 
 nav a:hover,
-nav li.active a { /* Stijl voor de actieve link in de navigatie */
+nav li.active a {
     color: #d4af37;
     transform: scale(1.05);
 }
 
-/* HERO SECTION met achtergrondfoto (Alleen voor Homepage) */
+/* HERO SECTION */
 .hero {
     position: relative;
     background: url('../image/foto2.webp') center/cover no-repeat;
@@ -73,7 +76,6 @@ nav li.active a { /* Stijl voor de actieve link in de navigatie */
     overflow: hidden;
 }
 
-/* Lichte en blurry overlay */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -81,10 +83,9 @@ nav li.active a { /* Stijl voor de actieve link in de navigatie */
     width: 100%;
     height: 100%;
     backdrop-filter: blur(6px);
-    background-color: rgba(11, 26, 51, 0.55); /* donkerblauw met transparantie */
+    background-color: rgba(11, 26, 51, 0.55);
 }
 
-/* Tekst bovenop de foto */
 .hero-text {
     position: relative;
     color: #fff;
@@ -103,7 +104,7 @@ nav li.active a { /* Stijl voor de actieve link in de navigatie */
     margin-bottom: 25px;
 }
 
-/* Knop */
+/* Knoppen */
 .btn {
     display: inline-block;
     background-color: #d4af37;
@@ -120,7 +121,6 @@ nav li.active a { /* Stijl voor de actieve link in de navigatie */
     transform: scale(1.05);
 }
 
-/* HERO KNOP NAAR GALLERY OP HOMEPAGE */
 .btn-gallery {
     background-color: #b9972f;
     color: #0b1a33;
@@ -128,10 +128,9 @@ nav li.active a { /* Stijl voor de actieve link in de navigatie */
 
 .btn-gallery:hover {
     background-color: #d4af37;
-    transform: scale(1.05);
 }
 
-/* ABOUT SECTION (Alleen voor Homepage/About Us) */
+/* ABOUT SECTION */
 .about {
     text-align: center;
     padding: 80px 20px;
@@ -177,24 +176,21 @@ footer {
 }
 
 .footer-bottom {
+    background: #0b1a33;
+    color: #fff;
     text-align: center;
     border-top: 1px solid #d4af37;
     margin-top: 20px;
-    padding-top: 15px;
+    padding: 25px 0 15px 0;
     font-size: 0.85rem;
 }
 
-
-/* GALLERY SPECIFIC STYLES */
-
-/* VASTE HEADER ALLEEN VOOR GALLERY (wordt al via .fixed-header gebruikt) */
-
 /* GALLERY SECTION */
 .gallery {
-    padding: 160px 20px 80px 20px; /* top-padding zodat content niet onder header valt */
+    padding: 160px 20px 80px 20px;
     background-color: #f2f2f2;
     text-align: center;
-    min-height: 100vh; /* Zorgt ervoor dat de footer onderaan staat, ook bij weinig content */
+    min-height: 100vh;
 }
 
 .gallery h2 {
@@ -203,11 +199,16 @@ footer {
     color: #0b1a33;
 }
 
-/* GRID VOOR FOTO'S EN VIDEO'S */
+.video-title {
+    margin: 70px 0 30px 0;
+    font-size: 2rem;
+    color: #0b1a33;
+}
+
+/* GRID */
 .gallery-container {
     display: grid;
-    /* Responsive grid met een minimale kolombreedte van 280px */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     justify-items: center;
     max-width: 1400px;
@@ -219,32 +220,78 @@ footer {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; /* Zorgt ervoor dat het item de volledige grid-kolom breedte inneemt */
+    width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
-/* Essentieel: Zorgt dat zowel foto's als video's mooi in de grid passen */
 .gallery-item img,
 .gallery-item video {
     width: 100%;
-    height: 100%; /* Zorgt dat het de container vult */
+    height: 100%;
     display: block;
-    object-fit: cover; /* Belangrijk voor uniformiteit in de grid */
+    object-fit: cover;
     border-radius: 10px;
 }
 
-/* Om de hoogte van de video/foto's in de grid te uniformeren. 
-Dit maakt alle items even groot (vierkant) tenzij je video's/foto's in een vaste ratio zijn. */
-.gallery-item {
-    aspect-ratio: 16 / 9; /* Een veelgebruikte video/afbeeldingsratio */
+/* VIDEO AANPASSINGEN */
+.gallery-item.video-item {
+    aspect-ratio: 16 / 10;
+    position: relative;
 }
 
+.gallery-item.video-item video {
+    border-bottom: 4px solid #d4af37;
+}
 
+.gallery-item.video-item::after {
+    content: "VIDEO";
+    position: absolute;
+    bottom: 6px;
+    right: 10px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 3px 8px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+}
+
+/* HOVER EFFECT */
 .gallery-item:hover {
-    transform: scale(1.03); /* Iets subtieler effect */
+    transform: scale(1.03);
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-/* MEDIA QUERIES voor kleinere schermen */
+/* LIGHTBOX */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+#lightbox-content img,
+#lightbox-content video {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 900px) {
     header {
         flex-direction: column;
@@ -267,35 +314,16 @@ Dit maakt alle items even groot (vierkant) tenzij je video's/foto's in een vaste
     }
 
     body {
-        padding-top: 170px; /* Meer ruimte voor de verticale header */
+        padding-top: 170px;
     }
 
     .gallery {
-        padding-top: 200px; /* Meer ruimte voor de verticale header in gallery */
+        padding-top: 200px;
     }
 
     .footer-content {
         flex-direction: column;
         text-align: center;
         gap: 20px;
-    }
-}
-
-@media (max-width: 500px) {
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav a {
-        font-size: 1rem;
-    }
-
-    .gallery-container {
-        grid-template-columns: 1fr; /* 1 kolom op zeer kleine schermen */
-    }
-
-    .gallery-item {
-        aspect-ratio: 4 / 3; /* Andere ratio voor mobiel */
     }
 }
