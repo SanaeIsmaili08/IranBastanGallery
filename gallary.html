@@ -1,173 +1,171 @@
 <!DOCTYPE html>
-<html lang="EN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Iran Bastan Gallery</title>
+    <title>Gallery — Iran Bastan Gallery</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
-
 <body>
 
+<!-- HEADER -->
 <header class="fixed-header">
     <img src="image/Logo .jpg" alt="Iran Bastan Gallery Logo" class="logo">
     <h1>Iran Bastan Gallery</h1>
-    <nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li class="active"><a href="gallary.html">Gallery</a></li>
+            <li><a href="heart.html">My ❤️</a></li>
         </ul>
     </nav>
 </header>
 
+<!-- GALLERY SECTION -->
 <section class="gallery">
-    <h2>Our gallery</h2>
+    <h2>Our Collection</h2>
+    <div class="gallery-page-divider"></div>
 
-    <!-- FOTO'S -->
-    <div class="gallery-container photos">
-
-        <div class="gallery-item">
-            <a href="#img1"><img src="image/f4.jpg"></a>
-        </div>
-        <div id="img1" class="lightbox">
-            <a href="#" class="close"></a>
-            <img src="image/f4.jpg">
-        </div>
+    <div class="gallery-container">
 
         <div class="gallery-item">
-            <a href="#img2"><img src="image/f2.jpg"></a>
+            <div class="card-header">
+                <span class="photo-title">Handmade Persian Backgammon &amp; Chessboards</span>
+                <span class="like-btn" data-id="1" data-img="image/f4.jpg" title="Opslaan als favoriet">♡</span>
+            </div>
+            <a href="#img1"><img src="image/f4.jpg" alt="Handmade Persian Backgammon and Chessboards" loading="lazy"></a>
         </div>
-        <div id="img2" class="lightbox">
-            <a href="#" class="close"></a>
-            <img src="image/f2.jpg">
-        </div>
+        <div id="img1" class="lightbox"><a href="#" class="close"></a><img src="image/f4.jpg" alt="Handmade Persian Backgammon and Chessboards"></div>
 
         <div class="gallery-item">
-            <a href="#img3"><img src="image/f3.jpg"></a>
+            <div class="card-header">
+                <span class="photo-title">Traditional Persian Home Decor</span>
+                <span class="like-btn" data-id="3" data-img="image/f3.jpg" title="Save as favorite">♡</span>
+            </div>
+            <a href="#img3"><img src="image/f3.jpg" alt="Traditional Persian Home Decor" loading="lazy"></a>
         </div>
-        <div id="img3" class="lightbox">
-            <a href="#" class="close"></a>
-            <img src="image/f3.jpg">
-        </div>
+        <div id="img3" class="lightbox"><a href="#" class="close"></a><img src="image/f3.jpg" alt="Traditional Persian Home Decor"></div>
 
         <div class="gallery-item">
-            <a href="#img4"><img src="image/f5.jpeg"></a>
+            <div class="card-header">
+                <span class="photo-title">Pearl Necklace with Velvet Display &amp; Jewelry Box</span>
+                <span class="like-btn" data-id="4" data-img="image/f5.jpeg" title="Save as favorite">♡</span>
+            </div>
+            <a href="#img4"><img src="image/f5.jpeg" alt="Pearl Necklace with Velvet Display and Jewelry Box" loading="lazy"></a>
         </div>
-        <div id="img4" class="lightbox">
-            <a href="#" class="close"></a>
-            <img src="image/f5.jpeg">
-        </div>
+        <div id="img4" class="lightbox"><a href="#" class="close"></a><img src="image/f5.jpeg" alt="Pearl Necklace with Velvet Display and Jewelry Box"></div>
 
         <div class="gallery-item">
-            <a href="#img5"><img src="image/f6.jpeg"></a>
+            <div class="card-header">
+                <span class="photo-title">Elegant Persian Jewelry Box</span>
+                <span class="like-btn" data-id="5" data-img="image/f6.jpeg" title="Save as favorite">♡</span>
+            </div>
+            <a href="#img5"><img src="image/f6.jpeg" alt="Elegant Persian Jewelry Box" loading="lazy"></a>
         </div>
-        <div id="img5" class="lightbox">
-            <a href="#" class="close"></a>
-            <img src="image/f6.jpeg">
-        </div>
+        <div id="img5" class="lightbox"><a href="#" class="close"></a><img src="image/f6.jpeg" alt="Elegant Persian Jewelry Box"></div>
 
         <div class="gallery-item">
-            <a href="#img6"><img src="image/f7.jpeg"></a>
+            <div class="card-header">
+                <span class="photo-title">Round Souvenir Box</span>
+                <span class="like-btn" data-id="6" data-img="image/f7.jpeg" title="Save as favorite">♡</span>
+            </div>
+            <a href="#img6"><img src="image/f7.jpeg" alt="Round Souvenir Box" loading="lazy"></a>
         </div>
-        <div id="img6" class="lightbox">
-            <a href="#" class="close"></a>
-            <img src="image/f7.jpeg">
-        </div>
+        <div id="img6" class="lightbox"><a href="#" class="close"></a><img src="image/f7.jpeg" alt="Round Souvenir Box"></div>
 
         <div class="gallery-item">
-            <a href="#img7"><img src="image/f8.jpeg"></a>
+            <div class="card-header">
+                <span class="photo-title">Luxury Backgammon Set</span>
+                <span class="like-btn" data-id="7" data-img="image/f8.jpeg" title="Save as favorite">♡</span>
+            </div>
+            <a href="#img7"><img src="image/f8.jpeg" alt="Luxury Backgammon Set" loading="lazy"></a>
         </div>
-        <div id="img7" class="lightbox">
-            <a href="#" class="close"></a>
-            <img src="image/f8.jpeg">
-        </div>
+        <div id="img7" class="lightbox"><a href="#" class="close"></a><img src="image/f8.jpeg" alt="Luxury Backgammon Set"></div>
 
         <div class="gallery-item">
-            <a href="#img8"><img src="image/f9.jpeg"></a>
+            <div class="card-header">
+                <span class="photo-title">Persian Narrative Game Board</span>
+                <span class="like-btn" data-id="8" data-img="image/f9.jpeg" title="Save as favorite">♡</span>
+            </div>
+            <a href="#img8"><img src="image/f9.jpeg" alt="Persian Narrative Game Board" loading="lazy"></a>
         </div>
-        <div id="img8" class="lightbox">
-            <a href="#" class="close"></a>
-            <img src="image/f9.jpeg">
+        <div id="img8" class="lightbox"><a href="#" class="close"></a><img src="image/f9.jpeg" alt="Persian Narrative Game Board"></div>
+
+        <div class="gallery-item">
+            <div class="card-header">
+                <span class="photo-title">Store Collection — Chess Pieces &amp; Boxes</span>
+                <span class="like-btn" data-id="9" data-img="image/f1.jpg" title="Save as favorite">♡</span>
+            </div>
+            <a href="#img9"><img src="image/f1.jpg" alt="Store collection chess pieces and boxes" loading="lazy"></a>
         </div>
+        <div id="img9" class="lightbox"><a href="#" class="close"></a><img src="image/f1.jpg" alt="Store collection chess pieces and boxes"></div>
+
+        <div class="gallery-item">
+            <div class="card-header">
+                <span class="photo-title">Collection of Carpets &amp; Wall Decor</span>
+                <span class="like-btn" data-id="10" data-img="image/f2.jpg" title="Save as favorite">♡</span>
+            </div>
+            <a href="#img10"><img src="image/f2.jpg" alt="Collection of carpets and wall decor" loading="lazy"></a>
+        </div>
+        <div id="img10" class="lightbox"><a href="#" class="close"></a><img src="image/f2.jpg" alt="Collection of carpets and wall decor"></div>
 
     </div>
 
-    <h2 class="video-title">Our videos</h2>
+    <!-- VIDEO SECTION -->
+    <h2 class="video-title">Videos from the Gallery</h2>
+    <div class="gallery-page-divider"></div>
 
-    <!-- VIDEO'S -->
-    <div class="gallery-container videos">
-
-        <div class="gallery-item">
-            <a href="#vid1"><video src="video/v1.mp4"></video></a>
+    <div class="video-grid">
+        <div class="video-card">
+            <video src="v1.mp4" controls playsinline preload="metadata" poster="image/f4.jpg"></video>
         </div>
-        <div id="vid1" class="lightbox">
-            <a href="#" class="close"></a>
-            <video src="video/v1.mp4" controls autoplay></video>
+        <div class="video-card">
+            <video src="v2.mp4" controls playsinline preload="metadata" poster="image/f3.jpg"></video>
         </div>
-
-        <div class="gallery-item">
-            <a href="#vid2"><video src="video/v2.mp4"></video></a>
+        <div class="video-card">
+            <video src="v3.mp4" controls playsinline preload="metadata" poster="image/f5.jpeg"></video>
         </div>
-        <div id="vid2" class="lightbox">
-            <a href="#" class="close"></a>
-            <video src="video/v2.mp4" controls autoplay></video>
+        <div class="video-card">
+            <video src="v4.mp4" controls playsinline preload="metadata" poster="image/f6.jpeg"></video>
         </div>
-
-        <div class="gallery-item">
-            <a href="#vid3"><video src="video/v3.mp4"></video></a>
+        <div class="video-card">
+            <video src="v5.mp4" controls playsinline preload="metadata" poster="image/f7.jpeg"></video>
         </div>
-        <div id="vid3" class="lightbox">
-            <a href="#" class="close"></a>
-            <video src="video/v3.mp4" controls autoplay></video>
+        <div class="video-card">
+            <video src="v6.mp4" controls playsinline preload="metadata" poster="image/f8.jpeg"></video>
         </div>
-
-        <div class="gallery-item">
-            <a href="#vid4"><video src="video/v4.mp4"></video></a>
+        <div class="video-card">
+            <video src="v7.mp4" controls playsinline preload="metadata" poster="image/f9.jpeg"></video>
         </div>
-        <div id="vid4" class="lightbox">
-            <a href="#" class="close"></a>
-            <video src="video/v4.mp4" controls autoplay></video>
+        <div class="video-card">
+            <video src="v8.mp4" controls playsinline preload="metadata" poster="image/f1.jpg"></video>
         </div>
-
-        <div class="gallery-item">
-            <a href="#vid5"><video src="video/v5.mp4"></video></a>
-        </div>
-        <div id="vid5" class="lightbox">
-            <a href="#" class="close"></a>
-            <video src="video/v5.mp4" controls autoplay></video>
-        </div>
-
-        <div class="gallery-item">
-            <a href="#vid6"><video src="video/v6.mp4"></video></a>
-        </div>
-        <div id="vid6" class="lightbox">
-            <a href="#" class="close"></a>
-            <video src="video/v6.mp4" controls autoplay></video>
-        </div>
-
-        <div class="gallery-item">
-            <a href="#vid7"><video src="video/v7.mp4"></video></a>
-        </div>
-        <div id="vid7" class="lightbox">
-            <a href="#" class="close"></a>
-            <video src="video/v7.mp4" controls autoplay></video>
-        </div>
-
-        <div class="gallery-item">
-            <a href="#vid8"><video src="video/v8.mp4"></video></a>
-        </div>
-        <div id="vid8" class="lightbox">
-            <a href="#" class="close"></a>
-            <video src="video/v8.mp4" controls autoplay></video>
-        </div>
-
     </div>
 
 </section>
 
-<footer class="footer-bottom">
-    © 2025 Iran Bastan Gallery.
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Contact Information</h3>
+            <p>📞 Phone: 06 24595777</p>
+            <p>📍 Raadhuisstraat, 1016 DC Amsterdam</p>
+        </div>
+        <div class="footer-section">
+            <h3>Opening Hours</h3>
+            <p>Mon–Sat: 10:00–18:00</p>
+            <p>Sunday: 12:00–17:00</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Iran Bastan Gallery — All rights reserved</p>
+    </div>
 </footer>
 
+<script src="script/script.js"></script>
 </body>
 </html>

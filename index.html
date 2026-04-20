@@ -1,69 +1,106 @@
 <!DOCTYPE html>
-<html lang="nl"> 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Iran, Bastan, Gallery, Art, Culture, History">
-    <meta name="description" content="Explore the rich cultural heritage and stunning art of Iran at Iran Bastan Gallery. Discover antique and handmade crafts, chandeliers, tablecloths, cushions, trays, vases, and unique decorative pieces for your home.">
+    <meta name="keywords" content="Iran, Bastan, Gallery, Art, Culture, Crafts, Amsterdam">
+    <meta name="description" content="Iran Bastan Gallery — Handmade and antique Persian artworks in Amsterdam. Chessboards, jewelry boxes, carpets and more.">
     <meta name="author" content="Iran Bastan Gallery">
     <title>Iran Bastan Gallery</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
-
 <body>
 
-    <!-- ✅ Toegevoegde class -->
-    <header class="fixed-header">
-        <img src="image/Logo .jpg" alt="Iran Bastan Gallery Logo" class="logo">
-        <h1>Iran Bastan Gallery</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact">Location</a></li>
-                <li><a href="gallary.html">Gallery</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- HEADER -->
+<header class="fixed-header">
+    <img src="image/Logo .jpg" alt="Iran Bastan Gallery Logo" class="logo">
+    <h1>Iran Bastan Gallery</h1>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
+        <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="gallary.html">Gallery</a></li>
+            <li><a href="heart.html">My ❤️</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-text">
-            <h2>Welcome to Iran Bastan Gallery</h2>
-            <p>Antique and handmade crafts — chandeliers, tablecloths, cushions, trays, vases, and unique decorative pieces for your home.</p>
-            <a href="gallary.html" class="btn btn-gallery">Gallery</a>
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+        <span class="hero-ornament"></span>
+        <h2>Welcome to Iran Bastan Gallery</h2>
+        <p>Antique and handmade artworks — chessboards, tablecloths, cushions, trays, vases and unique decorative pieces from Persia.</p>
+        <div class="hero-buttons">
+            <a href="gallary.html" class="btn">View Gallery</a>
+            <a href="#about" class="btn btn-outline">About Us</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="about" class="about">
+<!-- ABOUT -->
+<section id="about" class="about">
+    <div class="about-inner reveal">
         <h2>About Us</h2>
-        <p>At Iran Bastan Gallery, we celebrate Iran’s artistic legacy through a curated selection of handmade and antique crafts. Our collection includes chandeliers, textiles, tablecloths, trays, vases, and many more unique items that blend beauty with tradition.</p>
-        <p>Each piece is carefully selected to bring timeless elegance and cultural richness into your home.</p>
-    </section>
+        <div class="about-divider"></div>
+        <p>At Iran Bastan Gallery, we celebrate Iran's artistic heritage through a carefully curated selection of handmade and antique artworks.</p>
+        <p>Each piece is personally selected to bring timeless elegance and cultural richness to your home.</p>
 
-    <footer id="contact">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Contact Information</h3>
-                <p>📞 Phone: 06 24595777</p>
-                <p>📍 Address: Raadhuisstraat, 1016 DC Amsterdam</p>
+        <div class="about-features">
+            <div class="feature-card reveal">
+                <div class="feature-icon">♟️</div>
+                <h3>Chess & Backgammon</h3>
+                <p>Hand-painted game sets of the highest quality</p>
             </div>
-            <div class="footer-section">
-                <h3>Opening Hours</h3>
-                <p>Monday: 10:00–18:00</p>
-                <p>Tuesday: 10:00–18:00</p>
-                <p>Wednesday: 10:00–18:00</p>
-                <p>Thursday: 10:00–18:00</p>
-                <p>Friday: 10:00–18:00</p>
-                <p>Saturday: 10:00–18:00</p>
-                <p>Sunday: 12:00–17:00</p>
+            <div class="feature-card reveal">
+                <div class="feature-icon">💎</div>
+                <h3>Jewelry & Boxes</h3>
+                <p>Unique jewelry boxes with Persian mosaic patterns</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">🏺</div>
+                <h3>Home Decor</h3>
+                <p>Authentic Persian decorative pieces and vases</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">🧵</div>
+                <h3>Carpets & Textiles</h3>
+                <p>Handwoven carpets and traditional textiles</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>© 2025 Iran Bastan Gallery — All Rights Reserved</p>
-        </div>
-    </footer>
+    </div>
+</section>
 
+<!-- FOOTER / CONTACT -->
+<footer id="contact">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Contact Information</h3>
+            <p>📞 Phone: 06 24595777</p>
+            <p>📍 Address: Raadhuisstraat, 1016 DC Amsterdam</p>
+        </div>
+        <div class="footer-section">
+            <h3>Opening Hours</h3>
+            <p>Mon–Sat: 10:00–18:00</p>
+            <p>Sunday: 12:00–17:00</p>
+        </div>
+        <div class="footer-section">
+            <h3>Gallery</h3>
+            <p><a href="gallary.html" style="color:inherit;text-decoration:none;">View all pieces →</a></p>
+            <p><a href="heart.html" style="color:inherit;text-decoration:none;">My favorites ❤️</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Iran Bastan Gallery — All rights reserved</p>
+    </div>
+</footer>
+
+<script src="script/script.js"></script>
 </body>
 </html>
