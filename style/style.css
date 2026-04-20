@@ -293,9 +293,8 @@ nav li.active a {
    GALLERY PAGE
    ============================================= */
 .gallery {
-    padding: calc(var(--header-h) + 48px) 16px 80px;
+    padding: 48px 16px 0;
     background: var(--cream);
-    min-height: 100vh;
 }
 .gallery > h2 {
     font-family: 'Playfair Display', serif;
@@ -472,7 +471,11 @@ nav li.active a {
 footer {
     background-color: var(--navy);
     color: var(--text-light);
-    position: relative;
+    position: static;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-bottom: 0;
+    padding: 0;
 }
 footer::before {
     content: '';
@@ -489,6 +492,7 @@ footer::before {
     max-width: 1100px;
     margin: 0 auto;
     padding: 52px 24px 32px;
+    width: 100%;
 }
 .footer-section h3 {
     font-family: 'Playfair Display', serif;
